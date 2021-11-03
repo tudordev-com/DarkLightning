@@ -64,15 +64,15 @@ class RootView: NSView, NSTextFieldDelegate {
         textField.isBezeled = false
         textField.font = NSFont.systemFont(ofSize: 14.0)
         textField.delegate = self
-        textField.setContentHuggingPriority(NSLayoutPriorityDefaultHigh, for:.vertical)
+        textField.setContentHuggingPriority(NSLayoutConstraint.Priority.defaultHigh, for:.vertical)
         textField.placeholderString = "Type a message here and hit Enter to send"
     }
     
     private func setupScrollView() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.hasVerticalScroller = true
-        scrollView.setContentCompressionResistancePriority(NSLayoutPriorityDefaultHigh, for: .horizontal)
-        scrollView.contentView.autoresizingMask = .viewHeightSizable
+        scrollView.setContentCompressionResistancePriority(NSLayoutConstraint.Priority.defaultHigh, for: .horizontal)
+        scrollView.contentView.autoresizingMask = .height
         scrollView.documentView = textView;
     }
     
@@ -107,8 +107,7 @@ class RootView: NSView, NSTextFieldDelegate {
     }
     
     // MARK: NSTextFieldDelegate
-    
-    override func controlTextDidEndEditing(_ obj: Notification) {
+    func controlTextDidEndEditing(_ obj: Notification) {
         delegate.sendMessage(message: textField.stringValue)
         textField.stringValue = ""
     }

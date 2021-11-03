@@ -125,7 +125,7 @@
 				AED8C3BE8614721D89C0C246 /* iOS.framework */,
 				9C66CCD970FA2299BCE5BE9F /* DarkLightning.framework */,
 				756970C09383C2C83E2161A3 /* Tests.xctest */,
-				7C3703E2E426EDD6E7F05176 /* tvOS.framework */,
+				7C3703E2E426EDD6E7F05176 /* DarkLightning.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,19 +214,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					4F256DF20B66BC6DB879A355 = {
-						DevelopmentTeam = JAC9UTPT4U;
+						DevelopmentTeam = 3S37KDJTPB;
 					};
 				};
 			};
 			buildConfigurationList = 73B7F1D4BC59D3726FA5090B /* Build configuration list for PBXProject "iOS" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 6CB294809C6E5C536D5AD2DD;
 			productRefGroup = A07EA0E7194DC4B82EF5D950 /* Products */;
@@ -252,7 +253,7 @@
 			remoteRef = E585E211A61C9C48CDDC7D3A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7C3703E2E426EDD6E7F05176 /* tvOS.framework */ = {
+		7C3703E2E426EDD6E7F05176 /* DarkLightning.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = DarkLightning.framework;
@@ -307,6 +308,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE7C2ED85D2B793662EE988E /* Debug.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 			};
 			name = Debug;
 		};
@@ -315,7 +326,7 @@
 			baseConfigurationReference = 702955FB02A0A4268CA6C723 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = JAC9UTPT4U;
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 			};
 			name = Release;
@@ -324,6 +335,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F392C2AA09D97D05EA793C52 /* Release.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
@@ -332,7 +354,7 @@
 			baseConfigurationReference = BB3EC1464FDFB1EB0717D9AF /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = JAC9UTPT4U;
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 			};
 			name = Debug;

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0147BFB8ABEA1EFD5222029A /* CFSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7308E5972FD122C801D898 /* CFSocket.swift */; };
 		02FB5E23B30CA8BCE916D0E4 /* NetworkUInt16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94959069E776E9070F15DF93 /* NetworkUInt16.swift */; };
+		059C54F42732B3D200C862BF /* Daemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A0FCB5D0CE140D19D699B0 /* Daemon.swift */; };
+		059C54F52732B3D200C862BF /* DaemonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C3D202356C4B4A1252BFF9 /* DaemonDelegate.swift */; };
+		059C54F62732B3D200C862BF /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46467C08905CC62A70BF5D61 /* Device.swift */; };
+		059C54F72732B3D200C862BF /* DeviceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0BDD8CEE88DD8579E1C284 /* DeviceDelegate.swift */; };
+		059C54F82732B3D200C862BF /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCDA9E1ED71AE428061282 /* Devices.swift */; };
+		059C54F92732B3D200C862BF /* USBMuxMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA2AA2ED5507213CA37FDDF /* USBMuxMessage.swift */; };
 		0940603AC5AADE4E50571538 /* IncomingDataReaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A167B6B2F3C9BC1AC5FD6C /* IncomingDataReaction.swift */; };
 		0BD011E1E1170FC49E17B4B3 /* OOUInt32.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4039B4199A9528F08341A37 /* OOUInt32.swift */; };
 		0DB6546A803A20327EE4FF27 /* AttachMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F1AEC4DD558BB972070A7 /* AttachMessage.swift */; };
@@ -250,7 +256,7 @@
 		92C933267FE378EE72A72B79 /* DevicePortSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DevicePortSpec.swift; sourceTree = "<group>"; };
 		94959069E776E9070F15DF93 /* NetworkUInt16.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NetworkUInt16.swift; sourceTree = "<group>"; };
 		988D713FFAA47B0A2067BCE6 /* StreamDelegateFake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StreamDelegateFake.swift; sourceTree = "<group>"; };
-		99611684723BCA374D291E65 /* iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iOS.framework; path = DarkLightning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99611684723BCA374D291E65 /* DarkLightning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkLightning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A400BA151AABC7538E68A26 /* CachedDevicesSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CachedDevicesSpec.swift; sourceTree = "<group>"; };
 		9B87A03DE6688671269DB06E /* DisconnectStreamReaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DisconnectStreamReaction.swift; sourceTree = "<group>"; };
 		9BA48BEDE4F0C87AAB751BAC /* Debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -369,7 +375,7 @@
 		34CC5A1C8445EEEAEC11D4F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				99611684723BCA374D291E65 /* iOS.framework */,
+				99611684723BCA374D291E65 /* DarkLightning.framework */,
 				FB3FEF581B0A0B97C24E1829 /* DarkLightning.framework */,
 				8E1B43C81F5027CBCBC5B4E9 /* Tests.xctest */,
 				91928CBCE1744FA0CAD337B0 /* DarkLightning.framework */,
@@ -709,7 +715,7 @@
 			);
 			name = iOS;
 			productName = iOS;
-			productReference = 99611684723BCA374D291E65 /* iOS.framework */;
+			productReference = 99611684723BCA374D291E65 /* DarkLightning.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		62AFD051A581325F8F7B8152 /* OSX */ = {
@@ -770,14 +776,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1310;
 			};
 			buildConfigurationList = A4E5E594CF6E369645D2D64C /* Build configuration list for PBXProject "DarkLightning" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = AF89140B7C090EF591E64B47;
 			productRefGroup = 34CC5A1C8445EEEAEC11D4F0 /* Products */;
@@ -840,6 +847,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059C54F42732B3D200C862BF /* Daemon.swift in Sources */,
+				059C54F52732B3D200C862BF /* DaemonDelegate.swift in Sources */,
+				059C54F62732B3D200C862BF /* Device.swift in Sources */,
+				059C54F72732B3D200C862BF /* DeviceDelegate.swift in Sources */,
+				059C54F82732B3D200C862BF /* Devices.swift in Sources */,
+				059C54F92732B3D200C862BF /* USBMuxMessage.swift in Sources */,
 				E1515A1D191DC0C03CE60B06 /* CFSocket.swift in Sources */,
 				3130CBA330FAECDF42F2CD06 /* CloseStreamReaction.swift in Sources */,
 				6B6AF7CB0A29A21B9FD503E1 /* Connections.swift in Sources */,

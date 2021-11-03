@@ -20,8 +20,8 @@ internal final class UInt32WithData: OOUInt32 {
     // MARK: OOUInt32
 	
 	var rawValue: UInt32 {
-		return data.dataValue.withUnsafeBytes { (ptr: UnsafePointer<UInt32>) -> UInt32 in
-			return ptr.pointee
+		return data.dataValue.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) -> UInt32 in
+            return bytes.load(as: UInt32.self)
 		}
 	}
 }

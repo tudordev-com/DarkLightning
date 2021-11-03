@@ -161,7 +161,7 @@
 				B4CCE5AD1ECB51DE00E44C98 /* iOS.framework */,
 				B4CCE5AF1ECB51DE00E44C98 /* DarkLightning.framework */,
 				B4CCE5B11ECB51DE00E44C98 /* Tests.xctest */,
-				B4CCE5B31ECB51DE00E44C98 /* tvOS.framework */,
+				B4CCE5B31ECB51DE00E44C98 /* DarkLightning.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,14 +232,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1310;
 			};
 			buildConfigurationList = F1BF4C21C7DA03C44E25E320 /* Build configuration list for PBXProject "OSX" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 20D9FAF808EEF7100204ECE2;
 			productRefGroup = 9574022A698619FC9DF154A3 /* Products */;
@@ -280,10 +281,10 @@
 			remoteRef = B4CCE5B01ECB51DE00E44C98 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B4CCE5B31ECB51DE00E44C98 /* tvOS.framework */ = {
+		B4CCE5B31ECB51DE00E44C98 /* DarkLightning.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = tvOS.framework;
+			path = DarkLightning.framework;
 			remoteRef = B4CCE5B21ECB51DE00E44C98 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -362,6 +363,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F419588E991F9CC9C8C388F /* Debug.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 			};
 			name = Debug;
 		};
@@ -369,6 +380,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BCEABF922407099AAF3D36D /* Release.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};

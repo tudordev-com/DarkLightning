@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal protocol RootViewDelegate: class {
+internal protocol RootViewDelegate: AnyObject {
     func sendMessage(message: String)
 }
 
