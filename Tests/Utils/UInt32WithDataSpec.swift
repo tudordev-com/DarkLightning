@@ -15,7 +15,7 @@ class UInt32WithDataSpec: XCTestCase {
 			UInt32WithData(
 				data: RawData(
 					Data(
-						bytes: [12,0,0,0]
+						[12,0,0,0]
 					)
 				)
 			).rawValue == 12

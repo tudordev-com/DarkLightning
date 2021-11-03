@@ -777,6 +777,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					F7EF695BB4499C668C942591 = {
+						DevelopmentTeam = 3S37KDJTPB;
+					};
+				};
 			};
 			buildConfigurationList = A4E5E594CF6E369645D2D64C /* Build configuration list for PBXProject "DarkLightning" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1023,6 +1028,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E364FF9FA7466C52CA8C7EB1 /* Debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
 			};
 			name = Debug;
 		};
@@ -1079,6 +1085,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77D94876D5CB1AABF9DCA48B /* Release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
 			};
 			name = Release;
 		};
