@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var port: DarkLightning.Port?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let textView = Memory<UITextView?>(initialValue: nil)
         let navigationItem = Memory<UINavigationItem?>(initialValue: nil)
         port = DevicePort(delegate: MessengerDelegate(textView: textView, navigationItem: navigationItem))

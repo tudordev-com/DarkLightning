@@ -33,7 +33,7 @@ import Foundation
  * Represents a Daemon with which you can connect.
  *
  */
-public protocol Daemon: class {
+public protocol Daemon: AnyObject {
     
     /**
      *

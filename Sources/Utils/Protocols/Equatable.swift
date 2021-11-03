@@ -28,7 +28,7 @@
 
 import Foundation
 
-public protocol Equatable: class {
+public protocol Equatable: AnyObject {
     func isEqual(obj: Any) -> Bool
 }
 

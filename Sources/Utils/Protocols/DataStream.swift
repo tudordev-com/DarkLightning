@@ -28,7 +28,7 @@
 
 import Foundation
 
-public protocol DataStream: class {
+public protocol DataStream: AnyObject {
     func open(in queue: DispatchQueue)
 	func close()
 }

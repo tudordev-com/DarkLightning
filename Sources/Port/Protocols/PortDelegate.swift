@@ -33,7 +33,7 @@ import Foundation
  * The delegate of a Port object. Adopt this protocol to receive callbacks for Port related events.
  *
  */
-public protocol PortDelegate: class {
+public protocol PortDelegate: AnyObject {
     /**
      *
      * Tells the delegate that a connection has been established to the port

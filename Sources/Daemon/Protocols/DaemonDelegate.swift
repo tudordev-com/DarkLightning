@@ -33,7 +33,7 @@ import Foundation
  * The delegate of a Daemon object. Adopt this protocol to receive callbacks for device attach and detach events.
  *
  */
-public protocol DaemonDelegate: class {
+public protocol DaemonDelegate: AnyObject {
     /**
      *
      * Tells the delegate that a new device has been attached to the daemon

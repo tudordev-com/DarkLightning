@@ -28,7 +28,7 @@
 
 import Foundation
 
-public protocol Connections: class {
+public protocol Connections: AnyObject {
 	func insert(address: Data, socket: CFSocketNativeHandle)
 }
 

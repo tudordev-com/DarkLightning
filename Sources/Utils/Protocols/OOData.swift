@@ -28,7 +28,7 @@
 
 import Foundation
 
-public protocol OOData: class {
+public protocol OOData: AnyObject {
 	var dataValue: Data {get}
 }
 

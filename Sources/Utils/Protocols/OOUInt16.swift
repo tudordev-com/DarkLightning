@@ -26,7 +26,7 @@
  *	CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-internal protocol OOUInt16: class {
+internal protocol OOUInt16: AnyObject {
 	var rawValue: UInt16 {get}
 }
 

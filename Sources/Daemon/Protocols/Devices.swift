@@ -28,7 +28,7 @@
 
 import Foundation
 
-internal protocol Devices: class {
+internal protocol Devices: AnyObject {
     func insert(deviceID: Int, data: Data)
     func device(withID deviceID: Int) -> [Device]
     func delete(withID deviceID: Int)

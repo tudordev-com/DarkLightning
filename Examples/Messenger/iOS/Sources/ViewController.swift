@@ -61,8 +61,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textView.rawValue?.translatesAutoresizingMaskIntoConstraints = false
         textField?.translatesAutoresizingMaskIntoConstraints = false
         button?.translatesAutoresizingMaskIntoConstraints = false
-        button?.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
-        textField?.setContentHuggingPriority(UILayoutPriorityDefaultLow, for: .horizontal)
+        button?.setContentHuggingPriority(UILayoutPriority.required, for: .horizontal)
+        textField?.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
         container.addSubview(textView.rawValue!)
         textFieldContainer.addSubview(textField!)
         messageContainer.addSubview(textFieldContainer)
@@ -105,8 +105,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         self.header.rawValue = navigationItem
         button?.isEnabled = false
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -117,8 +117,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.header.rawValue = nil
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     // MARK: Text Field Events
@@ -148,10 +148,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @objc private func keyboardWillShow(notification: Notification) {
         let info = notification.userInfo!
-        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         let keyboardHeight: CGFloat = keyboardSize.height
-        let duration = info[UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
-        UIView.animate(withDuration: duration, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
             self.bottomConstraint?.constant = -keyboardHeight
             self.view.layoutIfNeeded()
         }, completion: nil)
@@ -159,8 +159,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @objc private func keyboardWillHide(notification: Notification) {
         let info = notification.userInfo!
-        let duration = info[UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
-        UIView.animate(withDuration: duration, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
             self.bottomConstraint?.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)

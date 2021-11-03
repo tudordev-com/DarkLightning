@@ -33,7 +33,7 @@ import Foundation
  * The delegate of a Device object. Adopt this protocol to receive callbacks for device related events.
  *
  */
-public protocol DeviceDelegate: class {
+public protocol DeviceDelegate: AnyObject {
     /**
      * 
      * Tells the delegate that a device did disconnect
